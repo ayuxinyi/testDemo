@@ -1,0 +1,196 @@
+.mainContent {
+    @include wh(100%, 100%);
+    padding: 0px 20px 20px 0;
+
+    .itemContent {
+        width: 250px;
+        height: 230px;
+        border-radius: 5px;
+        background: #fff;
+        padding: 10px;
+        float: left;
+        position: relative;
+        margin-left: 20px;
+        margin-top: 20px;
+
+        .itemHeader {
+            p {
+                margin: 0px;
+                font-size: 16px;
+                color: #222;
+                font-weight: 600;
+                position: relative;
+                height: 30px;
+                line-height: 30px;
+                padding: 0px;
+                @include positionRightLine(-1px, -1px, -10px, 4px, #0080fd);
+
+                .headerInfo {
+                    cursor: pointer;
+                    font-size: 12px;
+                    @include positionRight(absolute, 0, 0)
+                }
+            }
+        }
+
+        .itemInfo {
+            .infoTitle {
+                font-size: 13px;
+                color: #555;
+                margin-top: 13px;
+                text-align: left;
+            }
+        }
+
+        .bottomInfo {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            font-size: 12px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .echartContent {
+            width: 100%;
+            height: calc(100% - 30px);
+        }
+
+        .dateContent {
+            .changeSpan {
+                @include flex(left, center);
+
+                p {
+                    font-size: 12px;
+                    background: #fff;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    color: #666;
+                    cursor: pointer;
+                    padding: 0px 12px;
+                    margin: 0px;
+                    margin-right: 8px;
+                }
+
+                p:first-child {
+                    background-color: #0080fd;
+                    color: #fff;
+                }
+            }
+
+            .dateItem {
+                margin-top: 15px;
+                position: relative;
+                @include positionbottomLine(0, 0, -8px, 1px);
+
+                .dateHeader {
+                    @include flex(left, center);
+
+                    p {
+                        font-size: 13px;
+                        color: #222;
+                        font-weight: 700;
+                    }
+
+                    .iconP {
+                        background-color: #0080fd;
+                        color: #fff;
+                        border-radius: 4px;
+                        font-weight: normal;
+                        width: 18px;
+                        height: 18px;
+                        text-align: center;
+                        line-height: 18px;
+                        margin-right: 6px;
+                        padding: 0px;
+                    }
+                }
+
+                .itemInfo {
+                    @include flex(left, center);
+                    margin-top: 5px;
+
+                    span {
+                        font-size: 12px;
+                        color: #555;
+                    }
+
+                    span:first-child {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+
+        .messageContent {
+            ul {
+                .messageItem {
+                    list-style: none;
+                    margin-top: 5px;
+                    .infoP {
+                        .borderIcon {
+                            width: 8px;
+                            height: 8px;
+                            background: #c9c9c9;
+                            border-radius: 50%;
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 4px;
+                        }
+
+                        .messageInfoNew {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: calc(100% - 36px);
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            font-size: 12px;
+                            margin-right: 4px;
+                            color: #222;
+                        }
+
+                        .messageInfo {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: calc(100% - 18px);
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            font-size: 12px;
+                            margin-right: 4px;
+                            color: #222;
+                        }
+
+                        .messageIcon {
+                            background-color: red;
+                            color: #fff;
+                            border-radius: 4px;
+                            font-weight: normal;
+                            text-align: center;
+                            line-height: 15px;
+                            margin-right: 0px;
+                            padding: 2px;
+                            font-size: 12px;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+
+                    .timeP {
+                        text-align: right;
+                        margin-top: 5px;
+                        span {
+                            font-size: 13px;
+                            color: #666;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .itemContent:last-child {
+        margin-right: 0;
+    }
+}

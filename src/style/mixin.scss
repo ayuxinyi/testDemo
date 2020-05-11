@@ -1,0 +1,82 @@
+$blue: #3190e8;
+$bc: #e4e4e4;
+$fc:#fff;
+$common-width:1px;
+$common-color:#ccc;
+$common-height:1px;
+
+// 元素长宽
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 字体颜色,大小, 水平布局
+@mixin font($size, $color: #333, $text-align: left) {
+  font-size: $size;
+  color: $color;
+  text-align: $text-align;
+}
+
+// flex布局
+@mixin flex($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// 默认按照父元素的剧中
+@mixin positionCenter($position: absolute) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+
+// 默认按照父元素的剧中
+@mixin positionHCenter($position: absolute) {
+  position: $position;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+@mixin positionLeft($position: absolute, $left: 0, $top:0) {
+  position: $position;
+  left: $left;
+  top: $top;
+}
+
+@mixin positionRight($position: absolute, $right: 0, $top:0) {
+  position: $position;
+  right: $right;
+  top: $top;
+}
+
+@mixin positionRightLine($top:0, $bottom:0, $left:0, $width:$common-width, $color:$common-color) {
+  &:before {
+    position: absolute;
+    bottom: $bottom;
+    top: $top;
+    width: $width;
+    content: "";
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    background-color: $color;
+    left: $left;
+  }
+}
+
+@mixin positionbottomLine($left:0, $right:0, $bottom:0, $height:$common-height, $color:$common-color) {
+  &:after {
+    position: absolute;
+    left: $left;
+    right: $right;
+    height: $height;
+    content: "";
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    background-color: $color;
+    bottom: $bottom
+  }
+}
